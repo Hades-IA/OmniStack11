@@ -1,9 +1,17 @@
 const express = require("express");
 const app = express();
-const routes = require("./routes");
-app.use(express.json())
+const cors = require("cors")
 
-app.use("/", routes)
+const ongController = require("./controller/ongController");
+const incidentController = require("./controller/incidentController");
+const sessionController = require("./controller/sessionController");
+app.use(express.json());
+
+app.use(cors());
 
 
+
+app.use("/", ongController)
+app.use("/", incidentController)
+app.post("/session", sessionController.create)
 app.listen(3333);
