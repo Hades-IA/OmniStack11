@@ -14,4 +14,5 @@ app.use(cors());
 app.use("/", ongController)
 app.use("/", incidentController)
 app.post("/session", sessionController.create)
+app.post("/ong/delete", sessionController.delete)
 app.listen(3333);
