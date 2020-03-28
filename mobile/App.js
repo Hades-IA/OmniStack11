@@ -1,0 +1,20 @@
+import'intl';
+import 'intl/locale-data/jsonp/pt-BR'
+
+import * as React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
+
+// You can import from local files
+import AssetExample from './components/AssetExample';
+import Routes from "./src/routes";
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
+
+export default function App() {
+  return (
+    <Routes/>
+  );
+}
+
+
